@@ -13,6 +13,7 @@
 		C5CCCF4D2AD069DF00A446F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCF4B2AD069DF00A446F4 /* Main.storyboard */; };
 		C5CCCF4F2AD069E000A446F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCF4E2AD069E000A446F4 /* Assets.xcassets */; };
 		C5CCCF522AD069E000A446F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CCCF502AD069E000A446F4 /* LaunchScreen.storyboard */; };
+		C5CCCF5C2AD079DB00A446F4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF5B2AD079DB00A446F4 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5CCCF4E2AD069E000A446F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5CCCF512AD069E000A446F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5CCCF532AD069E000A446F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CCCF5B2AD079DB00A446F4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C5CCCF452AD069DF00A446F4 /* AppDelegate.swift */,
 				C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */,
 				C5CCCF492AD069DF00A446F4 /* ViewController.swift */,
+				C5CCCF5B2AD079DB00A446F4 /* WelcomeViewController.swift */,
 				C5CCCF4B2AD069DF00A446F4 /* Main.storyboard */,
 				C5CCCF4E2AD069E000A446F4 /* Assets.xcassets */,
 				C5CCCF502AD069E000A446F4 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5CCCF4A2AD069DF00A446F4 /* ViewController.swift in Sources */,
+				C5CCCF5C2AD079DB00A446F4 /* WelcomeViewController.swift in Sources */,
 				C5CCCF462AD069DF00A446F4 /* AppDelegate.swift in Sources */,
 				C5CCCF482AD069DF00A446F4 /* SceneDelegate.swift in Sources */,
 			);
@@ -302,9 +306,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dstashkov.AboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dstashkov.AboutMeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
