@@ -49,9 +49,9 @@ class LoginViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
         if sender.tag == 0 {
-            showAlert(with: "Oops!", and: "Your username is \(username)")
+            showAlert(with: "Oops!", and: "Your username is \(username) 😉")
         } else if sender.tag == 1 {
-            showAlert(with: "Oops!", and: "Your password is \(password)")
+            showAlert(with: "Oops!", and: "Your password is \(password) 😉")
         }
     }
     @IBAction func logInButtonPressed(_ sender: UIButton) {

@@ -19,7 +19,7 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeMessage.text = "Welcome, " +  welcome
+        welcomeMessage.text = "Welcome, " +  welcome + "!"
         smile.text = "👋"
         smile.font = UIFont.systemFont(ofSize: 70)
     }
