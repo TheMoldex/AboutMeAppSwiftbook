@@ -15,10 +15,11 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomMesage.text = welcome
+        welcomMesage.text = "Welcome, " +  welcome
         smile.text = "👋"
         smile.font = UIFont.systemFont(ofSize: 70)
     }
+    
     @IBAction func logOutButtonPressed() {
     }
     

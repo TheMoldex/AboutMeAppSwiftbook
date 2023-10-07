@@ -28,13 +28,15 @@ class ViewController: UIViewController {
             }
             return true
         }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginVC = segue.destination as? WelcomeViewController else {return}
-        loginVC.welcome = "Welcome, \(username)"
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.welcome = username
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
