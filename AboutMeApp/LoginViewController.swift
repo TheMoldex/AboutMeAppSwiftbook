@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private weak var usernameTF: UITextField!
     @IBOutlet private weak var passwordTF: UITextField!
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
 
 }
 // MARK: - extension
-extension ViewController {
+extension LoginViewController {
     private func usernameIsValid( _ username: String?) -> Bool {
         username == "User"
     }
