@@ -8,14 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    // MARK: -
-    @IBOutlet weak var usernameTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var logInButton: UIButton!
-    // MARK: -
-    let username = "User"
-    let password = "Password"
-    // MARK: -
+    // MARK: - Outlets
+    @IBOutlet private weak var usernameTF: UITextField!
+    @IBOutlet private weak var passwordTF: UITextField!
+    @IBOutlet private weak var logInButton: UIButton!
+    
+    // MARK: - Private properties
+    private let username = "User"
+    private let password = "Password"
+    
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 20
@@ -43,7 +45,8 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    // MARK: -
+    
+    // MARK: - IBActions
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(with: "Oops!", and: "Your username is \(username)")
@@ -59,6 +62,7 @@ class ViewController: UIViewController {
         passwordTF.text = ""
     }
     
+    // MARK: - Private funcs
     private func  showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
@@ -69,7 +73,7 @@ class ViewController: UIViewController {
     }
 
 }
-
+// MARK: - extension
 extension ViewController {
     private func usernameIsValid( _ username: String?) -> Bool {
         username == "User"
