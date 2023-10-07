@@ -35,7 +35,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                         <connections>
                                             <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVb-m4-iiN"/>
-                                            <segue destination="U9Z-BM-4NU" kind="show" id="NCg-IF-RWV"/>
+                                            <segue destination="U9Z-BM-4NU" kind="show" identifier="LoginSegue" id="d1Y-lU-2rM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -102,10 +102,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-Ud-Ocp">
-                                <rect key="frame" x="166" y="227" width="67" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-Ud-Ocp">
+                                <rect key="frame" x="108" y="227" width="150" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="sq2-9a-yi8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="sq2-9a-yi8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
@@ -116,6 +116,10 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutButtonPressed" destination="U9Z-BM-4NU" eventType="touchUpInside" id="2Dx-up-Hhp"/>
+                                    <segue destination="xfd-av-F8M" kind="unwind" unwindAction="unwindFor:" id="NrC-4M-2Gg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qD3-WZ-zhM"/>
@@ -123,17 +127,22 @@
                         <constraints>
                             <constraint firstItem="qD3-WZ-zhM" firstAttribute="trailing" secondItem="1En-HK-ywd" secondAttribute="trailing" constant="117" id="8nN-XQ-XvO"/>
                             <constraint firstItem="vWF-Ud-Ocp" firstAttribute="top" secondItem="1En-HK-ywd" secondAttribute="bottom" constant="71" id="AV2-AT-al7"/>
+                            <constraint firstItem="vWF-Ud-Ocp" firstAttribute="leading" secondItem="qD3-WZ-zhM" secondAttribute="leading" constant="108" id="Jdq-SM-97P"/>
                             <constraint firstItem="qD3-WZ-zhM" firstAttribute="bottom" secondItem="ydI-EA-edc" secondAttribute="bottom" constant="91" id="R8X-aZ-fTp"/>
-                            <constraint firstItem="qD3-WZ-zhM" firstAttribute="trailing" secondItem="vWF-Ud-Ocp" secondAttribute="trailing" constant="142" id="V0g-Q4-naO"/>
                             <constraint firstItem="ydI-EA-edc" firstAttribute="centerX" secondItem="qD3-WZ-zhM" secondAttribute="centerX" id="YNh-gr-xFJ"/>
-                            <constraint firstItem="vWF-Ud-Ocp" firstAttribute="leading" secondItem="qD3-WZ-zhM" secondAttribute="leading" constant="166" id="Z2d-mj-VJI"/>
                             <constraint firstItem="1En-HK-ywd" firstAttribute="leading" secondItem="qD3-WZ-zhM" secondAttribute="leading" constant="138" id="ZJS-rD-e9N"/>
                             <constraint firstItem="1En-HK-ywd" firstAttribute="top" secondItem="qD3-WZ-zhM" secondAttribute="top" constant="126" id="dnx-Xe-FKL"/>
+                            <constraint firstItem="qD3-WZ-zhM" firstAttribute="trailing" secondItem="vWF-Ud-Ocp" secondAttribute="trailing" constant="117" id="gk7-QV-k80"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="T3K-xN-C9x"/>
+                    <connections>
+                        <outlet property="smile" destination="vWF-Ud-Ocp" id="2Ha-WW-HnH"/>
+                        <outlet property="welcomMesage" destination="1En-HK-ywd" id="aA4-2s-o02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozh-wR-u0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xfd-av-F8M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="912.79999999999995" y="-28.335832083958024"/>
         </scene>

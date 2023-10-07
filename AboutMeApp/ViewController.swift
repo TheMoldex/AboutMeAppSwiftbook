@@ -21,6 +21,22 @@ class ViewController: UIViewController {
         logInButton.layer.cornerRadius = 20
     }
     
+        override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+            guard usernameTF.text == username, passwordTF.text == password else {
+                showAlert(with: "Oops!", and: "Username or password is incorrect")
+                return false
+            }
+            return true
+        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let loginVC = segue.destination as? WelcomeViewController else {return}
+        loginVC.welcome = "Welcome, \(username)"
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+    }
+    
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(with: "Oops!", and: "Your username is \(username)")
@@ -29,7 +45,17 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-        
+       
+    }
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTF.text = ""
+        passwordTF.text = ""
+    }
+    private func usernameIsValid( _ username: String) -> Bool {
+        username == "User"
+    }
+    private func passwordIsValid(_ password: String) -> Bool {
+        password == "Password"
     }
     
     private func  showAlert(with title: String, and message: String) {

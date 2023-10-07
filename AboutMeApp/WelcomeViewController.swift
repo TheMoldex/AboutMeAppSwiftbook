@@ -8,9 +8,18 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    @IBOutlet weak var welcomMesage: UILabel!
+    @IBOutlet weak var smile: UILabel!
+    
+    var welcome: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        welcomMesage.text = welcome
+        smile.text = "👋"
+        smile.font = UIFont.systemFont(ofSize: 70)
     }
+    @IBAction func logOutButtonPressed() {
+    }
+    
 }
