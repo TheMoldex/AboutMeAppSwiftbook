@@ -8,26 +8,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var forgotUsername: UIButton!
-    @IBOutlet weak var forgotPassword: UIButton!
+    // MARK: -
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var logInButton: UIButton!
-    
+    // MARK: -
     let username = "User"
     let password = "Password"
+    // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 20
     }
     
-        override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-            guard usernameTF.text == username, passwordTF.text == password else {
-                showAlert(with: "Oops!", and: "Username or password is incorrect")
-                return false
-            }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if usernameIsValid(usernameTF.text), passwordIsValid(passwordTF.text) {
             return true
         }
+        else {
+            showAlert(with: "Oops!", and: "Username or password is incorrect")
+            return false
+        }
+        /*  к тому моменту как я написал свое решение, я увидел, что в ТЗ есть метод, который надо использовать,
+         по сути у меня получилось около того же , только ,наверно, менее безопасно, потому что я не делал опциональную
+         привязку, если можно пару слов в фидбеке о моем решении*/
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -38,7 +43,7 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    
+    // MARK: -
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(with: "Oops!", and: "Your username is \(username)")
@@ -47,17 +52,11 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-       
     }
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         usernameTF.text = ""
         passwordTF.text = ""
-    }
-    private func usernameIsValid( _ username: String) -> Bool {
-        username == "User"
-    }
-    private func passwordIsValid(_ password: String) -> Bool {
-        password == "Password"
     }
     
     private func  showAlert(with title: String, and message: String) {
@@ -71,3 +70,12 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController {
+    private func usernameIsValid( _ username: String?) -> Bool {
+        username == "User"
+    }
+    private func passwordIsValid(_ password: String?) -> Bool {
+        password == "Password"
+    }
+    
+}

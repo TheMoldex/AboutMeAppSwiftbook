@@ -7,20 +7,20 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-    @IBOutlet weak var welcomMesage: UILabel!
-    @IBOutlet weak var smile: UILabel!
-    
+final class WelcomeViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var welcomeMessage: UILabel!
+    @IBOutlet private weak var smile: UILabel!
+    // MARK: - Public properties
     var welcome: String!
-    
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomMesage.text = "Welcome, " +  welcome
+        welcomeMessage.text = "Welcome, " +  welcome
         smile.text = "👋"
         smile.font = UIFont.systemFont(ofSize: 70)
     }
-    
-    @IBAction func logOutButtonPressed() {
+    // MARK: - IBActions
+    @IBAction private func logOutButtonPressed() {
     }
-    
 }

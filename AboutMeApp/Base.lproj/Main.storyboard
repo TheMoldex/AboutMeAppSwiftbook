@@ -74,8 +74,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgotPassword" destination="OYa-cK-503" id="ac1-wp-cTL"/>
-                        <outlet property="forgotUsername" destination="WiP-dB-Wry" id="utg-8P-XyC"/>
                         <outlet property="logInButton" destination="b0w-Gz-M9c" id="gbI-6u-i2t"/>
                         <outlet property="passwordTF" destination="Jfs-Lj-2mo" id="Vvg-fY-PUe"/>
                         <outlet property="usernameTF" destination="yDd-s0-HpZ" id="ghT-TL-ibo"/>
@@ -94,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1En-HK-ywd">
-                                <rect key="frame" x="83" y="126" width="230" height="30"/>
+                                <rect key="frame" x="62" y="126" width="251" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -124,7 +122,7 @@
                         <constraints>
                             <constraint firstItem="vWF-Ud-Ocp" firstAttribute="top" secondItem="1En-HK-ywd" secondAttribute="bottom" constant="71" id="AV2-AT-al7"/>
                             <constraint firstItem="vWF-Ud-Ocp" firstAttribute="leading" secondItem="qD3-WZ-zhM" secondAttribute="leading" constant="108" id="Jdq-SM-97P"/>
-                            <constraint firstItem="1En-HK-ywd" firstAttribute="leading" secondItem="qD3-WZ-zhM" secondAttribute="leading" constant="83" id="NAY-vK-pYn"/>
+                            <constraint firstItem="1En-HK-ywd" firstAttribute="leading" secondItem="qD3-WZ-zhM" secondAttribute="leading" constant="62" id="NAY-vK-pYn"/>
                             <constraint firstItem="qD3-WZ-zhM" firstAttribute="bottom" secondItem="ydI-EA-edc" secondAttribute="bottom" constant="91" id="R8X-aZ-fTp"/>
                             <constraint firstItem="qD3-WZ-zhM" firstAttribute="trailing" secondItem="1En-HK-ywd" secondAttribute="trailing" constant="62" id="VYT-PJ-WDU"/>
                             <constraint firstItem="ydI-EA-edc" firstAttribute="centerX" secondItem="qD3-WZ-zhM" secondAttribute="centerX" id="YNh-gr-xFJ"/>
@@ -135,7 +133,7 @@
                     <navigationItem key="navigationItem" id="T3K-xN-C9x"/>
                     <connections>
                         <outlet property="smile" destination="vWF-Ud-Ocp" id="2Ha-WW-HnH"/>
-                        <outlet property="welcomMesage" destination="1En-HK-ywd" id="aA4-2s-o02"/>
+                        <outlet property="welcomeMessage" destination="1En-HK-ywd" id="lKc-3Z-Ky5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozh-wR-u0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
