@@ -11,7 +11,6 @@ final class WelcomeViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var welcomeMessage: UILabel!
-    @IBOutlet private weak var smile: UILabel!
     
     // MARK: - Public properties
     var welcome: String!
@@ -20,11 +19,5 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeMessage.text = "Welcome, " +  welcome + "!"
-        smile.text = "👋"
-        smile.font = UIFont.systemFont(ofSize: 70)
-    }
-    
-    // MARK: - IBActions
-    @IBAction private func logOutButtonPressed() {
     }
 }

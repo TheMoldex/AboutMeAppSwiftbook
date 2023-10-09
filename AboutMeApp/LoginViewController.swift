@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet private weak var usernameTF: UITextField!
     @IBOutlet private weak var passwordTF: UITextField!
@@ -18,22 +18,13 @@ class LoginViewController: UIViewController {
     private let password = "Password"
     
     // MARK: - Overrides
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        logInButton.layer.cornerRadius = 20
-    }
-    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if usernameIsValid(usernameTF.text), passwordIsValid(passwordTF.text) {
             return true
-        }
-        else {
+        } else {
             showAlert(with: "Oops!", and: "Username or password is incorrect")
             return false
         }
-        /*  к тому моменту как я написал свое решение, я увидел, что в ТЗ есть метод, который надо использовать,
-         по сути у меня получилось около того же , только ,наверно, менее безопасно, потому что я не делал опциональную
-         привязку, если можно пару слов в фидбеке о моем решении*/
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,13 +39,9 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
-        if sender.tag == 0 {
-            showAlert(with: "Oops!", and: "Your username is \(username) 😉")
-        } else if sender.tag == 1 {
-            showAlert(with: "Oops!", and: "Your password is \(password) 😉")
-        }
-    }
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
+        sender.tag == 0 ?
+        showAlert(with: "Oops!", and: "Your username is \(username) 😉") :
+        showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

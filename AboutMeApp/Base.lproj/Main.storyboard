@@ -33,9 +33,13 @@
                                         <rect key="frame" x="0.0" y="92" width="335" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log in"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVb-m4-iiN"/>
-                                            <segue destination="U9Z-BM-4NU" kind="show" identifier="LoginSegue" id="d1Y-lU-2rM"/>
+                                            <segue destination="U9Z-BM-4NU" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="d1Y-lU-2rM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,7 +92,7 @@
             <objects>
                 <viewController id="U9Z-BM-4NU" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S9f-7f-zeg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1En-HK-ywd">
@@ -97,22 +101,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-Ud-Ocp">
-                                <rect key="frame" x="108" y="227" width="150" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-Ud-Ocp">
+                                <rect key="frame" x="108" y="227" width="150" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="sq2-9a-yi8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-EA-edc">
-                                <rect key="frame" x="146.5" y="521" width="82" height="35"/>
+                                <rect key="frame" x="146.5" y="541" width="82" height="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
                                 <connections>
-                                    <action selector="logOutButtonPressed" destination="U9Z-BM-4NU" eventType="touchUpInside" id="2Dx-up-Hhp"/>
                                     <segue destination="xfd-av-F8M" kind="unwind" unwindAction="unwindFor:" id="NrC-4M-2Gg"/>
                                 </connections>
                             </button>
@@ -132,7 +135,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="T3K-xN-C9x"/>
                     <connections>
-                        <outlet property="smile" destination="vWF-Ud-Ocp" id="2Ha-WW-HnH"/>
                         <outlet property="welcomeMessage" destination="1En-HK-ywd" id="lKc-3Z-Ky5"/>
                     </connections>
                 </viewController>
