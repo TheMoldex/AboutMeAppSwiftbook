@@ -22,7 +22,8 @@ final class LoginViewController: UIViewController {
         if usernameIsValid(usernameTF.text), passwordIsValid(passwordTF.text) {
             return true
         } else {
-            showAlert(with: "Oops!", and: "Username or password is incorrect")
+//            showAlert(with: "Oops!", and: "Username or password is incorrect")
+            showAlert(with: "Oops!", and: "Username or password is incorrect", textField: passwordTF)
             return false
         }
     }
@@ -50,10 +51,11 @@ final class LoginViewController: UIViewController {
     }
     
     // MARK: - Private funcs
-    private func  showAlert(with title: String, and message: String) {
+    private func  showAlert(with title: String, and message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTF.text = ""
+//            self.passwordTF.text = ""
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
