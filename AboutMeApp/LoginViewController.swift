@@ -14,15 +14,13 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var logInButton: UIButton!
     
     // MARK: - Private properties
-    private let username = "1"
-    private let password = "1"
+    let loginData = LoginModel.getModel()
     
     // MARK: - Overrides
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if usernameIsValid(usernameTF.text), passwordIsValid(passwordTF.text) {
             return true
         } else {
-//            showAlert(with: "Oops!", and: "Username or password is incorrect")
             showAlert(with: "Oops!", and: "Username or password is incorrect", textField: passwordTF)
             return false
         }
@@ -33,11 +31,12 @@ final class LoginViewController: UIViewController {
         guard let viewControllers = tabBarController.viewControllers else { return }
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.welcome = username
+                welcomeVC.model = loginData
             } else if let  navigationController = viewController as? UINavigationController {
                 guard let profileVC =  navigationController.topViewController as? ProfileViewController else { return }
-                profileVC.title = username
-                profileVC.nickname = username
+                profileVC.title = loginData.username
+                profileVC.nickname = loginData.username
+                profileVC.profileModel = loginData
             }
         }
     }
@@ -50,8 +49,8 @@ final class LoginViewController: UIViewController {
     // MARK: - IBActions
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(with: "Oops!", and: "Your username is \(username) 😉")
-        : showAlert(with: "Oops!", and: "Your password is \(password) 😉")
+        ? showAlert(with: "Oops!", and: "Your username is \(loginData.username) 😉")
+        : showAlert(with: "Oops!", and: "Your password is \(loginData.password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -74,10 +73,10 @@ final class LoginViewController: UIViewController {
 // MARK: - extension
 extension LoginViewController {
     private func usernameIsValid( _ username: String?) -> Bool {
-        username == "1"
+        username == loginData.username
     }
     private func passwordIsValid(_ password: String?) -> Bool {
-        password == "1"
+        password == loginData.password
     }
     
 }
