@@ -34,9 +34,9 @@ final class LoginViewController: UIViewController {
                 welcomeVC.model = loginData
             } else if let  navigationController = viewController as? UINavigationController {
                 guard let profileVC =  navigationController.topViewController as? ProfileViewController else { return }
-                profileVC.title = loginData.username
-                profileVC.nickname = loginData.username
+//                guard let bioVC = navigationController.viewControllers as? BioViewController else { return }
                 profileVC.profileModel = loginData
+//                bioVC.bioModel = loginData
             }
         }
     }

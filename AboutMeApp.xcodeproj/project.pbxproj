@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		C54508F82AD5556E00D1EACB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54508F72AD5556E00D1EACB /* ProfileViewController.swift */; };
 		C54508FA2AD59C9200D1EACB /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54508F92AD59C9200D1EACB /* LoginModel.swift */; };
-		C54508FD2AD5A19A00D1EACB /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54508FC2AD5A19A00D1EACB /* WelcomeModel.swift */; };
 		C54508FF2AD5A1B100D1EACB /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54508FE2AD5A1B100D1EACB /* ProfileModel.swift */; };
 		C54509012AD5A28800D1EACB /* BIoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54509002AD5A28800D1EACB /* BIoModel.swift */; };
+		C54509052AD5E42E00D1EACB /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54509042AD5E42E00D1EACB /* BioViewController.swift */; };
 		C5CCCF462AD069DF00A446F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF452AD069DF00A446F4 /* AppDelegate.swift */; };
 		C5CCCF482AD069DF00A446F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */; };
 		C5CCCF4A2AD069DF00A446F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF492AD069DF00A446F4 /* LoginViewController.swift */; };
@@ -24,9 +24,9 @@
 /* Begin PBXFileReference section */
 		C54508F72AD5556E00D1EACB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C54508F92AD59C9200D1EACB /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		C54508FC2AD5A19A00D1EACB /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
 		C54508FE2AD5A1B100D1EACB /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		C54509002AD5A28800D1EACB /* BIoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIoModel.swift; sourceTree = "<group>"; };
+		C54509042AD5E42E00D1EACB /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		C5CCCF422AD069DF00A446F4 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCCF452AD069DF00A446F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				C54508F92AD59C9200D1EACB /* LoginModel.swift */,
-				C54508FC2AD5A19A00D1EACB /* WelcomeModel.swift */,
 				C54508FE2AD5A1B100D1EACB /* ProfileModel.swift */,
 				C54509002AD5A28800D1EACB /* BIoModel.swift */,
 			);
@@ -83,6 +82,7 @@
 				C5CCCF452AD069DF00A446F4 /* AppDelegate.swift */,
 				C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */,
 				C5CCCF492AD069DF00A446F4 /* LoginViewController.swift */,
+				C54509042AD5E42E00D1EACB /* BioViewController.swift */,
 				C5CCCF5B2AD079DB00A446F4 /* WelcomeViewController.swift */,
 				C54508F72AD5556E00D1EACB /* ProfileViewController.swift */,
 				C5CCCF4B2AD069DF00A446F4 /* Main.storyboard */,
@@ -171,8 +171,8 @@
 				C54508FA2AD59C9200D1EACB /* LoginModel.swift in Sources */,
 				C5CCCF462AD069DF00A446F4 /* AppDelegate.swift in Sources */,
 				C5CCCF482AD069DF00A446F4 /* SceneDelegate.swift in Sources */,
-				C54508FD2AD5A19A00D1EACB /* WelcomeModel.swift in Sources */,
 				C54509012AD5A28800D1EACB /* BIoModel.swift in Sources */,
+				C54509052AD5E42E00D1EACB /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
