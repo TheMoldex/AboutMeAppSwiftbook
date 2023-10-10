@@ -27,7 +27,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jfs-Lj-2mo" userLabel="Password TF">
                                         <rect key="frame" x="0.0" y="46" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0w-Gz-M9c">
                                         <rect key="frame" x="0.0" y="92" width="335" height="34.5"/>
@@ -39,7 +39,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="U9Z-BM-4NU" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="d1Y-lU-2rM"/>
+                                            <segue destination="JlL-vX-p2p" kind="presentation" identifier="LoginSegue" modalPresentationStyle="fullScreen" id="d1Y-lU-2rM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -85,9 +85,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="913" y="-778"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--home-->
         <scene sceneID="yka-Nf-NUP">
             <objects>
                 <viewController id="U9Z-BM-4NU" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydI-EA-edc">
-                                <rect key="frame" x="146.5" y="541" width="82" height="35"/>
+                                <rect key="frame" x="146.5" y="492" width="82" height="35"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out"/>
@@ -133,6 +133,7 @@
                             <constraint firstItem="qD3-WZ-zhM" firstAttribute="trailing" secondItem="vWF-Ud-Ocp" secondAttribute="trailing" constant="117" id="gk7-QV-k80"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="home" image="homekit" catalog="system" id="2R4-4p-tml"/>
                     <navigationItem key="navigationItem" id="T3K-xN-C9x"/>
                     <connections>
                         <outlet property="welcomeMessage" destination="1En-HK-ywd" id="lKc-3Z-Ky5"/>
@@ -141,10 +142,206 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozh-wR-u0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xfd-av-F8M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="1852" y="-28.335832083958024"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="C7j-NQ-c6r">
+            <objects>
+                <viewController id="Oq7-xW-PiG" customClass="ProfileViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NL6-92-eES">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="owsvd2ihdfe.jpg__1563286799__94718" translatesAutoresizingMaskIntoConstraints="NO" id="vHe-hf-ndd" userLabel="ProofileImage">
+                                <rect key="frame" x="123.5" y="103" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vHe-hf-ndd" secondAttribute="height" multiplier="1:1" id="IrC-D8-kWS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="P8v-8R-BXL" userLabel="Info Stack">
+                                <rect key="frame" x="22" y="270" width="178.5" height="172"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vlh-Rv-g3O" userLabel="Hard label">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="172"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrD-Wm-gGz" userLabel="name">
+                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9P-xy-Kek" userLabel="surname">
+                                                <rect key="frame" x="0.0" y="50.5" width="77.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Ник:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elb-iK-Sgt" userLabel="nickname">
+                                                <rect key="frame" x="0.0" y="101" width="77.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стиль:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9m-Yw-EHd" userLabel="job">
+                                                <rect key="frame" x="0.0" y="151.5" width="77.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fio-Qs-60L" userLabel="Code label">
+                                        <rect key="frame" x="107.5" y="0.0" width="71" height="172"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мирон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlR-DG-CXv" userLabel="name">
+                                                <rect key="frame" x="0.0" y="0.0" width="71" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Федоров" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKW-hE-bwF" userLabel="surname">
+                                                <rect key="frame" x="0.0" y="50.5" width="71" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZb-GV-7x3" userLabel="nickname">
+                                                <rect key="frame" x="0.0" y="101" width="71" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="рэп" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVw-tA-J6w" userLabel="job">
+                                                <rect key="frame" x="0.0" y="151.5" width="71" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aM1-Vn-Q3s"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="P8v-8R-BXL" firstAttribute="top" secondItem="vHe-hf-ndd" secondAttribute="bottom" constant="39" id="6Zm-Hv-k51"/>
+                            <constraint firstItem="vHe-hf-ndd" firstAttribute="height" secondItem="NL6-92-eES" secondAttribute="height" multiplier="0.191904" id="CEV-N0-tSX"/>
+                            <constraint firstItem="vHe-hf-ndd" firstAttribute="centerX" secondItem="aM1-Vn-Q3s" secondAttribute="centerX" id="M6p-UV-jZC"/>
+                            <constraint firstItem="P8v-8R-BXL" firstAttribute="leading" secondItem="aM1-Vn-Q3s" secondAttribute="leading" constant="22" id="arP-ET-QLY"/>
+                            <constraint firstItem="vHe-hf-ndd" firstAttribute="top" secondItem="aM1-Vn-Q3s" secondAttribute="top" constant="7" id="r8C-EF-Wtm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="AvS-Gh-zaE">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="hFz-y6-977">
+                            <connections>
+                                <segue destination="2gO-B3-BKi" kind="show" id="rQi-dG-mlF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Psb-lC-1r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="769.56521739130437"/>
+        </scene>
+        <!--Profile Bio-->
+        <scene sceneID="38D-Ep-yL8">
+            <objects>
+                <viewController id="2gO-B3-BKi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Azj-UI-POv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWl-0A-rWb">
+                                <rect key="frame" x="20" y="116" width="335" height="482"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <string key="text">Родился 31 января 1985 года в Ленинграде в еврейской семье[11][12][13][14]. Его отец — Ян Валерьевич Фёдоров, физик-теоретик, в 1994 году защитил в Петербургском институте ядерной физики имени Б. П. Константинова докторскую диссертацию на тему «Статистические свойства собственных функций случайных одночастичных гамильтонианов»[15]. Мать — библиотекарь[16]. Учился в петербургской школе № 185. Когда Мирону было 9 лет, его семья переехала в город Эссен (Германия), и Мирон поступил в гимназию имени Марии Вехтлер (Maria-Wächtler-Gymnasiumrude). По его словам, у него были напряжённые отношения с немецкими одноклассниками; эта тема позже нашла отражение в его ранней песне «Последний звонок». Первые попытки читать рэп Мирон предпринял в возрасте 13 лет под псевдонимом Миф (сокращение от Мирон Фёдоров).
+
+У нас была группа, название которой я забыл, состояли в ней Миф и Сага. Сага так и не написал ни одной строчки и впоследствии сторчался. А я придумал русский рэп. То есть натурально был уверен, что я первый человек, читающий рэп по-русски (интернета у меня не было, а русскоязычных эмигрантов, которые могли бы поколебать мою уверенность, в Германии тогда ещё было достаточно мало).
+Оксимирон для Keep It Real[17]
+После одной из поездок на родину в 14 лет уверенность Мирона в том, что он родоначальник рэпа на русском языке, пропала.
+
+Когда Мирону было 15 лет, его семья переселилась в город Слау (Великобритания). Здесь, больше не имея проблем с одноклассниками, он усиленно взялся за учёбу. Вскоре учительница истории — выпускница Оксфордского университета — предложила ему попробовать поступить в Оксфорд после окончания школы. В 2004 году, подав документы и пройдя собеседование, Мирон поступил в университет на факультет английского языка и литературы.
+
+Я разговаривал на смеси так называемого «королевского» и книжного английского с немецким акцентом. Я слушал американский рэп, поэтому использовал много сленговых выражений. Я говорил такие слова, как «innit» во время моего собеседования в Оксфорде — думаю, что это одна из причин, по которой они приняли меня.
+
+Оригинальный текст (англ.)[показать]
+В 2006 году получил диагноз «маниакально-депрессивный психоз»[19] и был исключён по этой причине из вуза, но поступил повторно. В июне 2008 года получил диплом Оксфорда[20] по специальности «средневековая английская литература».
+
+После учёбы в Оксфорде Мирон переехал жить в Ист-Энд и начал поиски работы. Из-за «чрезмерной квалификации» он не смог найти работу по профессии. Как утверждает рэпер, он «работал кассиром, переводчиком, грузчиком, гидом, ларёчником, репетитором, конферансье, офисным планктоном и консультантом с копытом»[21]. Новый круг общения, состоявший из русскоязычных эмигрантов, подтолкнул Мирона вернуться к хип-хопу. Он стал заниматься музыкой под псевдонимом «Oxxxymiron», появившимся как сочетание имени с литературным термином «оксюморон» (англ. oxymoron) и утроенной —X", отсылающей к большому количеству нецензурной лексики в его песнях.
+
+С 2013 года живёт в Санкт-Петербурге[22].
+
+В 2015 году был выпущен сериал «Лондонград», созданный во главе со сценаристом Михаилом Идовым на основе приключений Мирона в Лондоне[23].
+
+После 24 февраля 2022 года уехал из России, однако, вернулся в сентябре того же года[24].</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U6I-Yd-SMJ"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="qWl-0A-rWb" firstAttribute="top" secondItem="U6I-Yd-SMJ" secondAttribute="top" constant="20" id="Qvm-7G-uDd"/>
+                            <constraint firstItem="qWl-0A-rWb" firstAttribute="leading" secondItem="U6I-Yd-SMJ" secondAttribute="leading" constant="20" id="R2R-is-E1E"/>
+                            <constraint firstItem="U6I-Yd-SMJ" firstAttribute="bottom" secondItem="qWl-0A-rWb" secondAttribute="bottom" constant="20" id="exj-T5-d2c"/>
+                            <constraint firstItem="U6I-Yd-SMJ" firstAttribute="trailing" secondItem="qWl-0A-rWb" secondAttribute="trailing" constant="20" id="rqF-7n-lu0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile Bio" id="AYi-X9-ZlY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4G-AR-N1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2688.8000000000002" y="769.56521739130437"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iFS-8t-SpE">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JlL-vX-p2p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jEc-mu-tzm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="U9Z-BM-4NU" kind="relationship" relationship="viewControllers" id="5Fp-aR-UT6"/>
+                        <segue destination="7HZ-ee-sl3" kind="relationship" relationship="viewControllers" id="cVN-sW-sPr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hju-wS-LgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="912.79999999999995" y="-28.335832083958024"/>
+        </scene>
+        <!--profile-->
+        <scene sceneID="cdt-FR-qjt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7HZ-ee-sl3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="profile" image="person.crop.circle.fill" catalog="system" id="wWI-an-vlJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="622-0K-hBl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Oq7-xW-PiG" kind="relationship" relationship="rootViewController" id="Qf8-6X-txd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2c9-pg-J9y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912.79999999999995" y="769.56521739130437"/>
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="owsvd2ihdfe.jpg__1563286799__94718" width="900" height="656"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

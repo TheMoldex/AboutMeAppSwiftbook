@@ -14,8 +14,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var logInButton: UIButton!
     
     // MARK: - Private properties
-    private let username = "User"
-    private let password = "Password"
+    private let username = "1"
+    private let password = "1"
     
     // MARK: - Overrides
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -29,8 +29,17 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcome = username
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.welcome = username
+            } else if let  navigationController = viewController as? UINavigationController {
+                guard let profileVC =  navigationController.topViewController as? ProfileViewController else { return }
+                profileVC.title = username
+                profileVC.nickname = username
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,9 +49,9 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
-        sender.tag == 0 ?
-        showAlert(with: "Oops!", and: "Your username is \(username) 😉") :
-        showAlert(with: "Oops!", and: "Your password is \(password) 😉")
+        sender.tag == 0
+        ? showAlert(with: "Oops!", and: "Your username is \(username) 😉")
+        : showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -65,10 +74,10 @@ final class LoginViewController: UIViewController {
 // MARK: - extension
 extension LoginViewController {
     private func usernameIsValid( _ username: String?) -> Bool {
-        username == "User"
+        username == "1"
     }
     private func passwordIsValid(_ password: String?) -> Bool {
-        password == "Password"
+        password == "1"
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54508F82AD5556E00D1EACB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54508F72AD5556E00D1EACB /* ProfileViewController.swift */; };
 		C5CCCF462AD069DF00A446F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF452AD069DF00A446F4 /* AppDelegate.swift */; };
 		C5CCCF482AD069DF00A446F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */; };
 		C5CCCF4A2AD069DF00A446F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCCF492AD069DF00A446F4 /* LoginViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C54508F72AD5556E00D1EACB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C5CCCF422AD069DF00A446F4 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCCF452AD069DF00A446F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				C5CCCF472AD069DF00A446F4 /* SceneDelegate.swift */,
 				C5CCCF492AD069DF00A446F4 /* LoginViewController.swift */,
 				C5CCCF5B2AD079DB00A446F4 /* WelcomeViewController.swift */,
+				C54508F72AD5556E00D1EACB /* ProfileViewController.swift */,
 				C5CCCF4B2AD069DF00A446F4 /* Main.storyboard */,
 				C5CCCF4E2AD069E000A446F4 /* Assets.xcassets */,
 				C5CCCF502AD069E000A446F4 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				C5CCCF4A2AD069DF00A446F4 /* LoginViewController.swift in Sources */,
 				C5CCCF5C2AD079DB00A446F4 /* WelcomeViewController.swift in Sources */,
+				C54508F82AD5556E00D1EACB /* ProfileViewController.swift in Sources */,
 				C5CCCF462AD069DF00A446F4 /* AppDelegate.swift in Sources */,
 				C5CCCF482AD069DF00A446F4 /* SceneDelegate.swift in Sources */,
 			);
