@@ -287,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="2688.8000000000002" y="769.56521739130437"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="iFS-8t-SpE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JlL-vX-p2p" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JlL-vX-p2p" customClass="TabBarViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jEc-mu-tzm">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

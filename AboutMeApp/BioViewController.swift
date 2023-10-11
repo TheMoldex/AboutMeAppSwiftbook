@@ -7,11 +7,15 @@
 
 import UIKit
 
-class BioViewController: UIViewController {
-    @IBOutlet weak var profileTitle: UINavigationItem!
-    @IBOutlet weak var bioTextView: UITextView!
+final class BioViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var profileTitle: UINavigationItem!
+    @IBOutlet private weak var bioTextView: UITextView!
     
+    // MARK: - Public property
     var bioModel: LoginModel!
+    
+    // MARK: - overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         profileTitle.title = bioModel.account.bio.title

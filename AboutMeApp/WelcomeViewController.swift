@@ -10,7 +10,7 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var welcomeMessage: UILabel!
+    @IBOutlet private weak var welcomeMessage: UILabel!
     
     // MARK: - Public properties
     var model: LoginModel!

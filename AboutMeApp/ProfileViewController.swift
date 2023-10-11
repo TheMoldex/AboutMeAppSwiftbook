@@ -7,24 +7,30 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var nicknameOutlet: UILabel!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var surname: UILabel!
-    @IBOutlet weak var style: UILabel!
-    @IBOutlet weak var profileTitle: UINavigationItem!
+final class ProfileViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet private weak var profileImage: UIImageView!
+    @IBOutlet private weak var nicknameOutlet: UILabel!
+    @IBOutlet private weak var name: UILabel!
+    @IBOutlet private weak var surname: UILabel!
+    @IBOutlet private weak var style: UILabel!
+    @IBOutlet private weak var profileTitle: UINavigationItem!
     
+    // MARK: - Public properties
     var profileModel: LoginModel!
     
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let bioVC = segue.destination as? BioViewController else { return }
         bioVC.bioModel = profileModel
     }
+    
+    // MARK: - Private func's
     private func setView() {
         profileTitle.title = profileModel.account.title
         profileImage.image = UIImage(named: profileModel.account.image)
