@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var logInButton: UIButton!
     
     // MARK: - Private properties
-    private let loginData = LoginModel.getModel()
+    private let model = User.getModel()
     
     // MARK: - Overrides
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -31,10 +31,10 @@ final class LoginViewController: UIViewController {
         guard let viewControllers = tabBarController.viewControllers else { return }
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.model = loginData
+                welcomeVC.welcomeModel = model
             } else if let  navigationController = viewController as? UINavigationController {
                 guard let profileVC =  navigationController.topViewController as? ProfileViewController else { return }
-                profileVC.profileModel = loginData
+                profileVC.profileModel = model
             }
         }
     }
@@ -47,8 +47,8 @@ final class LoginViewController: UIViewController {
     // MARK: - IBActions
     @IBAction private func forgotUsernameOrPassButtonPressed(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(with: "Oops!", and: "Your username is \(loginData.username) 😉")
-        : showAlert(with: "Oops!", and: "Your password is \(loginData.password) 😉")
+        ? showAlert(with: "Oops!", and: "Your username is \(model.username) 😉")
+        : showAlert(with: "Oops!", and: "Your password is \(model.password) 😉")
     }
     
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
@@ -70,10 +70,10 @@ final class LoginViewController: UIViewController {
 // MARK: - Extension
 extension LoginViewController {
     private func usernameIsValid( _ username: String?) -> Bool {
-        username == loginData.username
+        username == model.username
     }
     private func passwordIsValid(_ password: String?) -> Bool {
-        password == loginData.password
+        password == model.password
     }
     
 }

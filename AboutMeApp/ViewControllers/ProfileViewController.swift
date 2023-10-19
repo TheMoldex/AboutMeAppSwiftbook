@@ -17,7 +17,7 @@ final class ProfileViewController: UIViewController {
     @IBOutlet private weak var profileTitle: UINavigationItem!
     
     // MARK: - Public properties
-    var profileModel: LoginModel!
+    var profileModel: User!
     
     // MARK: - Overrides
     override func viewDidLoad() {

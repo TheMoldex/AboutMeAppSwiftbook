@@ -5,9 +5,13 @@
 //  Created by Денис Сташков on 10.10.2023.
 //
 
-import UIKit
-
-struct BioModel {
+struct Bio {
     let title: String
     let text: String
+}
+
+extension Bio {
+    static func getModel() -> Bio {
+        Bio(title: "", text: "")
+    }
 }

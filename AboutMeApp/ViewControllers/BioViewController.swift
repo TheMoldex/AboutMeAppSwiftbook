@@ -13,7 +13,7 @@ final class BioViewController: UIViewController {
     @IBOutlet private weak var bioTextView: UITextView!
     
     // MARK: - Public property
-    var bioModel: LoginModel!
+    var bioModel: User!
     
     // MARK: - overrides
     override func viewDidLoad() {
